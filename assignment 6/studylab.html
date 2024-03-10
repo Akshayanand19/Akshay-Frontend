@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        
+        #nav{
+           padding: 0px;height: 50px;box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+           display: flex;
+        }
+        #nav>div{
+            width: 80px;height: 50px;
+        }
+        #nav>:first-child{
+            margin-left: 50px;width: 100px;
+            
+        }
+        #nav>:nth-child(2){
+            margin-left: 380px;
+            
+        }
+        #nav>div>img{
+            width: 80%;
+            height: 50px;
+        }
+        #main{
+           height: 800px;display: grid;grid-template-columns: 1fr 1fr;grid-template-rows: 800px;margin-top: 10px;
+        }
+       
+        .first{ 
+            display: grid;grid-template-columns: 95%;gap: 10px;grid-template-rows: repeat(5, 150px);background-color: rgb(12, 12, 12); }
+         .first>div{
+            margin-left: 15px;display: flex;align-items: center;background-color: white;margin-top: 10px;border-radius: 10px;
+         }
+         .first>div>img{
+            width: 150px;height: 100px;border-radius: 5px;margin-left: 10px;
+         }
+          .first>div>h3{
+            margin-left: 10px;
+          }
+          #second{
+            display: grid;justify-content: space-evenly;gap: 20px; align-content: center; grid-template-columns: repeat(2, 230px );
+            grid-template-rows: repeat(2, 320px);background-color: rgb(240, 240, 240);
+          }
+          #second>div{
+            border-radius: 10px;position: relative; text-align: center;box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+          }
+          #second>div>img{
+            width: 100%;height: 100%;border-radius: 10px;
+          }
+          .text-container{
+            position: absolute;
+            color: white;
+            bottom: 40%;left: 30%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 16px;
+          }
+          .text-container2{
+            position: absolute;
+            color: white;
+            bottom: 48%;left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 14px;
+          }
+          .text-container3{
+            position: absolute;
+            color: black;
+            bottom: 40%;left: 33%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 16px;
+          }
+         
+            
+         
+         
+
+        
+
+    </style>
+</head>
+<body>
+    
+        <div id="nav">
+            <div>
+                <img src="https://cdn.logojoy.com/wp-content/uploads/20190710091256/apple-1024x612.png" alt="" >
+            </div>
+            <div><p>Home</p></div>
+            <div><p>About</p></div>
+            <div><p>Products</p></div>
+            <div><p>Blog</p></div>
+            <div><p>Contact</p></div>
+        </div>
+        <div id="main">
+            <div class="first">
+                <div>
+                   <img src="https://www.apple.com/newsroom/images/2024/01/apple-scores-record-13-academy-award-nominations/article/Apple-TV-Plus-Academy-Award-nominations-Killers-of-the-Flower-Moon_big.jpg.large_2x.jpg" alt="">
+                   <h3>Apple scores record 13 Academy Award nominations</h3>
+                </div>
+                <div>
+                    <img src="https://www.apple.com/newsroom/images/2024/01/apple-hongdae-now-open-in-south-korea/article/Apple-Hongdae-Seoul-opening-day-first-customers_Full-Bleed-Image.jpg.large_2x.jpg" alt="">
+                    <h3>Apple Hongdae now open in South Korea</h3>
+                </div>
+                <div>
+                    <img src="https://www.apple.com/newsroom/images/2024/02/ushers-road-to-halftime-on-apple-music-launches-today/article/Apple-Music-Super-Bowl-LVIII-Halftime-Show-USHER_big.jpg.large_2x.jpg" alt="">
+                    <h3>USHER’s Road to Halftime on Apple Music</h3></div>
+                <div>
+                    <img src="https://www.apple.com/newsroom/images/2023/12/redesigned-apple-tv-app-simplifies-the-viewing-experience/article/Apple-TV-app-home-screen_big.jpg.large_2x.jpg" alt="">
+                    <h3>Redesigned Apple TV app elevates the viewing experience</h3></div>
+                <div>
+                    <img src="https://www.apple.com/newsroom/images/logos/quick-reads-logos/Apple-App-Store.jpg.square_social.jpg" alt="">
+                    <h3>Apple spotlights the top apps and games of 2023 on the App Store</h3></div>
+
+            </div>
+            <div id="second">
+                <div>
+                    <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/store-card-40-iphone-15-pro-202309?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1692910040844" alt="">
+                    <div class="text-container">
+                        <p>IPHONE 15 pro</p>
+                        <h3>TITANIUM</h3>
+                        <p>From ₹134900.00</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/store-card-40-macbook-air-202402?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1707259289595" alt="">
+                    <div class="text-container3">
+                        <p>MACBOOK AIR</p>
+                        <h3>THIN</h3>
+                        <p>From ₹99900.00</p>
+                    </div>
+               </div>
+               <div>
+                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/store-card-40-ipad-pro-202210_GEO_IN?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1667506331714" alt="">
+                <div class="text-container">
+                    <p>IPAD PRO</p>
+                    <h3>Supercharged</h3>
+                    <p>From ₹81900.00‡</p>
+                </div>
+                
+               </div>
+               <div>
+                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/store-card-40-macbook-pro-202310?wid=800&hei=1000&fmt=p-jpg&qlt=95&.v=1696964122967" alt="">
+                <div class="text-container3">
+                    <p>MACBOOK PRO</p>
+                    <h3>HEAD-TURNING.</h3>
+                    <p>From ₹169900.00‡</p>
+               </div>
+
+        </div>
+    
+    
+</body>
+</html>

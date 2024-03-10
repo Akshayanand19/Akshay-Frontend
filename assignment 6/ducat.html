@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ducat news</title>
+  <style>
+    #box1{
+        border: 1px solid black;height: 350px;margin: 0px 150px;display: grid;grid-template-columns: 200px 200px 200px;grid-template-rows: 50px 230px 40px;justify-content: center;justify-content: space-evenly; gap: 10px;
+    }
+    #box2{
+        border: 1px solid blue;height: 180px;margin: 0px 150px;display: grid;grid-template-columns: 200px 200px 200px;grid-template-rows: 40px 80px;justify-content: center;justify-content: space-evenly;gap: 10px;
+    }
+    #box1>div{
+        border: 1px solid red;text-align: center;border-radius: 10px;
+    }
+    #box2>div{
+        border: 1px solid green;text-align: center;border-radius: 10px;
+    }
+    #box1>:first-child{
+        grid-area: 1/1/2/4;border-radius: 0px;
+       
+        }
+     #box1>:last-child{
+        grid-area: 3/1/4/4;border-radius: 0px;
+        
+     }   
+     #box2>:first-child{
+        grid-area: 1/1/2/4;border-radius: 0px;
+
+
+     }
+  </style>
+</head>
+<body>
+    <div id="box1">
+        <div><h2>Ducat in the news</h2></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div>akshay</div>
+        
+       
+        
+        
+
+    </div>
+
+
+
+
+    <div id="box2">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+    </div>
+    
+</body>
+</html>
