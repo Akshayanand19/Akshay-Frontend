@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mxplayer</title>
+    <script src="https://kit.fontawesome.com/3904e4d6d2.js" crossorigin="anonymous"></script>
+    <style>
+
+        *{
+            margin: 0px;
+            
+            box-sizing: border-box;
+
+        }
+        body{background-color: black;
+           
+        }
+
+        #nav{
+           
+            background-color: rgb(0, 0, 0,0.5);
+            padding-top: 10px;
+            width: 100vw;
+            height: 50px;
+            display: flex;align-items: center;margin-bottom: 5px;position: fixed;flex-wrap: wrap;
+        }
+       
+       
+
+        
+        #nav>p{ color:white;font-size: 20px;
+         ;margin-right: 50px;font-family: sans-serif;font-weight: 1000px;
+           
+        }
+        .fa-house{
+            color: white;font-size: 20px;
+        }
+        
+        
+         #nav>a{ 
+            text-decoration: none;color: white;
+            font-family: sans-serif;font-size: 15px;font-weight: 700;
+            margin: 0px 22px;
+
+        }
+        .fa-magnifying-glass{
+            color: white;font-size: 18px;margin-left: 80px;
+        }
+        .search{
+           margin-left: 10px;border-radius: 10px;height: 20px;width: 150px; border: 1px solid rgb(88, 75, 1);   
+         }
+         .fa-bars{
+            color: white;font-size: 20px;margin-left: 20px;
+
+         }
+        .fa-bell{
+             color: white;font-size: 20px;margin-left: 40px;
+
+        }
+        #img{
+           width: 100%;height: 600px;display: flex;flex-wrap: wrap;
+           justify-content: center;padding-top: 20px;
+        }
+        #img>img{
+           width: 100%;height: 650px;
+        }
+        #img2{
+            position: absolute;height: 200px;width: 250px;
+            right: 70%;top: 10%;
+
+        }
+          #img2>button{
+            margin: 30px 60px;
+            padding: 15px 30px;
+            
+             background: linear-gradient(to right, #00d2ff, #3a7bd5);border-radius: 10px;
+        }
+        #img2>button>p{
+            color: white;font-weight: 1000;font-size: 15px;
+        }
+        #right{
+            position: absolute;height: 100px;width: 100px;
+            right: 20%;top: 80%;display: flex;align-items: center;
+            justify-content: center;gap: 20px; }
+
+        #right>button{
+            color: rgb(255, 255, 255);font-size: 50px;
+             background-color:rgb(169, 169, 169,0.4);
+            ;border-radius: 5px;padding: 0px 20px;
+        }
+        #main{
+            padding-top: 70px;
+            width: 100vw; display: grid;justify-content: center;gap: 70px 10px;
+            grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));
+           grid-template-rows: repeat( 7,210px);background-color: #121212;height: 1750px;
+            
+            
+
+        }
+        #main>div{  border-radius: 5px;display: flex;justify-content: center;
+            
+
+        }
+        .oneh{
+            position: absolute;color: #CCCCCC;left: 20px;top: 630px;
+        }
+        #main>div>img{
+            border-radius: 5px;height: 100%;width: 95%;transition: all 0.2s ease;
+        }
+         #main>div>img:hover{
+            width: 105%;
+        }
+        
+
+        .h2{
+            position: absolute;color: #CCCCCC;left: 20px;top: 168%;
+        }
+        .h3{
+            position: absolute;color: #CCCCCC;left: 20px;top: 220%;
+        }
+        .h4{
+            position: absolute;color: #CCCCCC;left: 20px;top: 272%;
+        }
+        .h5{
+            position: absolute;color: #CCCCCC;left: 20px;top: 324%;
+        }
+        .h6{
+            position: absolute;color: #CCCCCC;left: 20px;top: 376%;
+        }
+        #foot{
+            width: 100vw;height: 350px;
+            background: linear-gradient(180deg, rgba(18,22,25,1) 30%, rgba(15,37,53,1) 50%, rgba(15,40,59,1) 100%);
+            display: grid;grid-template-columns: 365px 170px 170px 365px ;
+            grid-template-rows: 280px 50px;
+        }
+       
+        span{
+            color: white;
+        }
+        .footlogo>i{margin-top: 50px;
+
+        }
+        .footlogo>p{
+            color: white;padding:0px 20px;padding-top: 20px;font-size: 14px;font-family: sans-serif;font-weight: 300;
+        }
+        .footlogo>span{
+            color: white;padding-left: 20px;
+        }
+       .fa-square-facebook{
+        color: white;font-size:25px;margin-left: 10px;margin-right: 5px;
+       }
+       .fa-twitter{
+        color: white;font-size:25px;margin: 0px 5px;
+       }
+       .fa-youtube{
+        color: white;font-size:25px;margin: 0px 5px;
+       }
+       .fa-linkedin{
+        color: white;font-size:25px;margin: 0px 5px;
+       }
+       .fa-instagram{
+        color: white;font-size:25px;margin: 0px 5px;
+       }
+       #footone{
+        display: grid;
+       }
+       #footone>p{color: white;padding-top: 60px;padding-left: 20px   ;
+        font-weight: 900;font-family: sans-serif;font-size: 16px;
+
+       }
+       #footone>a{
+        text-decoration: none;color: #dddddd;
+            font-family: sans-serif;font-size: 11px;font-weight: 700;
+            margin: 0px 22px;
+       }
+       .fa-google-play{
+        color: #dddddd;padding-left: 25px;font-size: 20px;
+
+       }
+       .fa-apple{ color: #dddddd;padding-left: 25px;font-size: 30px;
+
+       }
+
+       
+       
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+ <nav>
+    <div id="nav">
+        <i class="fa-solid fa-circle-play" style="color:  #0079ff;font-size: 35px;margin-left: 60px;"></i>
+        <p><strong>MX</strong>PLAYER</p>
+       
+       <i class="fa-solid fa-house"></i>
+       <a href="">Shows</a>
+       <a href="">Movie</a>
+       <a href="">Others ></a>
+       <i class="fa-solid fa-magnifying-glass"></i>
+       <input class="search" title="upgrade to mx gold" type="" >
+       <i class="fa-solid fa-bell"></i>
+        <a href="">Login</a>
+        <i class="fa-solid fa-bars"></i>
+     </div>
+ </nav>
+    <div id="img">
+        <img src="https://qqcdnpictest.mxplay.com/pic/55f197b92fcabd89b2760d888e05b66d/en/16x9/1800x1012/test_pic1710403762492.webp" alt="">
+        <div id="img2">
+            <img src="https://qqcdnpictest.mxplay.com/pic/55f197b92fcabd89b2760d888e05b66d/en/16x9/480x270/test_pic1710403784387.png" alt="">
+            <button><p>PLAY</p></button>
+        </div>
+        <div id="right">
+            <button><</button>
+            <button>></button>
+        </div>
+    </div>
+    <div id="main">
+        <h2 class="oneh">Trending In Movies</h2>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/7097c73355eb2efe1be7a3d5a5f86b1b/en/2x3/312x468/30c7334e93bea584b4e2cda4491b3084_1280x1920.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/648f3d767af97faedf47fbaadabd4663/en/2x3/312x468/test_pic1704296590465.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/8586b3ca3c443140f9a9fd821fdc80a6/en/2x3/312x468/80de745979b248c95d0d1ea611285d76_1280x1920.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/56924d08b0d8b86b43cd68c080279088/en/2x3/312x468/c2fb1ba7a2fcce2d08d6dedf3db1168b_1280x1920.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/2d6aadd4e87a21dc5f1e366c77e948b8/en/2x3/312x468/ff6d73c369b671040d61a9d11dfe8724_1280x1920.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/548c7467c1bf73078378a08747f65142/en/2x3/312x468/d7070234376719b8013a8d5156e11b2b_1280x1920.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/ccd4dcb717e04447de64d143253a0cca/en/2x3/312x468/e3e70b2b65fd0b9e0d0c4be91f8879f7_1280x1920.webp" alt="">
+        </div>
+        <h2 class="h2">MX Original Web Shows</h2>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/1a9a8ebf62df05e913ce23f67d954e02/en/2x3/480x720/test_pic1699276495902.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/d1924002234d9096126aaee2ff997632/en/2x3/480x720/test_pic1709721270180.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/6cd0bb2e1c321c81e579275efa38ccd2/en/2x3/480x720/test_pic1709725655007.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/775ad3b682fde6a608559a60986b230d/en/2x3/480x720/test_pic1698305827480.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/07fe6b61a6c3dea88f619e8e5f032b74/en/2x3/480x720/test_pic1681049005948.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/0c91e61b9dcb929d93a31db9218e62c3/en/2x3/480x720/test_pic1709878031757_badged_1709878085249.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/ca7a124443044bf3c1f8ea52c8b7f9fc/en/2x3/480x720/test_pic1689833329737.webp" alt="">
+        </div>
+        <h2 class="h3">Trending Shows on MX</h2>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/8f484e1869cc333bce98594fa2da59e4/en/2x3/480x720/test_pic1699952747033_badged_1706519870864.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/c6382211316cb17d1757d82cf9605e4a/en/2x3/480x720/test_pic1666868994951.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/28eb409f965536c2e680ab44ea331324/en/2x3/480x720/test_pic1681127825369.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/afd977c9cdf8a38bb6afbf64b038a256/en/2x3/480x720/test_pic1691655091512.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/d33b68e4cf071fce2e7b95629dc17ebb/hi/2x3/480x720/test_pic1691531816944_badged_1691531820439.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/97b24da0eed5d345066d94ac5834db9c/en/2x3/480x720/test_pic1677049393778.webp" alt="">
+        </div>
+        <div>
+             <img src="https://qqcdnpictest.mxplay.com/pic/c06ebe266f3e7406eb14ab09f3e73fb5/en/2x3/480x720/test_pic1685710183042.webp" alt="">
+        </div>
+        <h2 class="h4">Queens of Cinema</h2>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/upload/test_pic1709649726711.png" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/upload/test_pic1709649776049.png" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/upload/test_pic1709649732193.png" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/upload/test_pic1709649737991.png" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/upload/test_pic1709649744677.png" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/upload/test_pic1709649750036.png" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/upload/test_pic1709649755439.png" alt="">
+        </div>
+        <h2 class="h5">Festive Release</h2>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/c0ea7fe5c952df8a9df8d6e2c473de94/en/2x3/312x468/f03d41e8f5cbd7f367878b8cc2738ec5_1280x1920.webp" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/4c87a4e73948891cff996b24bb96c193/en/2x3/312x468/f5940e4507fd68c9f9648256f09dd775_1280x1920.webp" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/93f7c2e84feef6f6f6a856d8c55be78b/en/2x3/312x468/94546ec0c20a0576184bdf3cc3283214_1280x1920.webp" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/ccd4dcb717e04447de64d143253a0cca/en/2x3/312x468/e3e70b2b65fd0b9e0d0c4be91f8879f7_1280x1920.webp" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/acc5236d24e759d8de4eccbaa413f909/en/2x3/312x468/test_pic1699519446838.webp" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/27252910ce705b640616f62d801e6a6d/en/2x3/312x468/798ce684b0c612c9f464d98d94664858_1280x1920.webp" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/59b3d9854f99ab405b57528e341e13f0/en/2x3/312x468/test_pic1699518337161.webp" alt="">
+        </div>
+        <h2 class="h6">Top Turkish Shows</h2>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/8f484e1869cc333bce98594fa2da59e4/en/2x3/480x720/test_pic1699952747033_badged_1706519870864.webp" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/50ad9260a0b79fd478bb60322e003985/en/2x3/480x720/test_pic1667719190747.webp" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/8c042e67dbcb727a80953d0733519c95/en/2x3/480x720/test_pic1666776202522.webp" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/2536382b01691eca018a8b2afe8c62f1/en/2x3/480x720/test_pic1677829812582.webp" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/42bd117d38a6bdb3fbb79ca1e1bee207/en/2x3/480x720/test_pic1667565837409.webp" alt="">
+        </div>
+        <div>
+            <img src="https://qqcdnpictest.mxplay.com/pic/30aae090ca5bb9283858050550fb68b6/hi/2x3/480x720/test_pic1667213835836_badged_1667213846595.webp" alt="">
+        </div>
+    </div>
+    <div id="foot">
+        <div class="footlogo">
+            <i class="fa-solid fa-circle-play" style="color:  #0079ff;font-size: 35px;margin-left: 60px;"></i>
+             <span style="color: white;font-size: 30px;font-family: sans-serif;font-weight: 700;"><strong>MX</strong>PLAYER</span>
+            <p>MX Player is your one-stop destination for all your entertainment such as latest movies, most popular web shows, Live TV channels, newly released songs etc</p>
+
+            <span>Follow for update</span>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-instagram"></i>
+            
+        </div>
+        <div id="footone">
+            <p>Company</p>
+            <a href="">About us</a> 
+            <a href="">careers</a>
+            <a href="">Advertise with us</a>
+            <a href="">Contact us</a>
+            <a href="">FAQ</a>
+        </div>
+        <div id="footone">
+            <p>Legal</p>
+            <a href="">Download apps</a> 
+            <a href="">Privacy policy</a>
+            <a href="">Terms of services</a>
+            <a href="">Content Complaints</a>
+            <a href="">compliannce report</a>
+
+        </div>
+        <div id="footone">
+            <p>Install our Mobile App for Best Experience</p>
+            <a href="">Open camera or any QR scanner <br> app on your mobile</a>
+            <a href="">Scan this QR code and you’ll prompt <br> a download link</a>
+            <a href="">App Available on</a> 
+            <i class="fa-brands fa-google-play"></i><i class="fa-brands fa-apple"></i>
+           
+        </div>
+
+
+        <div></div>
+
+    </div>
+
+
+ 
+    
+</body>
+</html>

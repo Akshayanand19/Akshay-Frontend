@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        #main{
+             border: 1px solid black;height: 400px ;padding: 10px;display: grid;gap: 10px;
+             grid-template-columns: repeat(3, 200px);
+             grid-template-rows: repeat(2, 200px);
+          
+        }
+      
+      #main>:first-child{
+        background-color: aqua;
+      }
+      #main>:nth-child(2){
+        background-color: rgb(185, 41, 53);
+        
+      }
+      #main>:nth-child(3){
+        background-color: rgb(7, 19, 145);
+      }
+      #main>:nth-child(4){
+        background-color: rgb(148, 46, 159);
+      }
+      #main>:nth-child(5){
+        background-color: rgb(128, 179, 39);
+      }
+      #main>:last-child{
+        background-color: rgb(198, 114, 45);
+      }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    
+</body>
+</html>
